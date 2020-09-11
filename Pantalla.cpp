@@ -28,13 +28,15 @@ int main()
     box(encabezado, ACS_VLINE, ACS_HLINE);
     int longitud = (MaxX - 2) / 3;
     int distanciaEnY = MaxY - 4;
-    WINDOW *segundaVentana = subwin(ventana, MaxY - 4, longitud, 6, 1);
+    WINDOW *segundaVentana = subwin(ventana, 10, longitud, 6, 1);
     box(segundaVentana, ACS_VLINE, ACS_HLINE);
-    WINDOW *terceraVentana = subwin(ventana, MaxY - 4, longitud * 2, 6, longitud + 1);
+    WINDOW *terceraVentana = subwin(ventana, 10, longitud * 2, 6, longitud + 1);
     box(terceraVentana, ACS_VLINE, ACS_HLINE);
+    mvwprintw(ventana, MaxY - 2, 1, "[Help]");
+    mvwprintw(ventana, MaxY - 2, MaxX - 8, "[Quit]");
     touchwin(ventana);
     wrefresh(ventana);
-    //getchar();
+    getchar();
     endwin();
     return 0;
 }
