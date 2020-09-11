@@ -34,7 +34,7 @@ int main()
     box(terceraVentana, ACS_VLINE, ACS_HLINE);
     touchwin(ventana);
     wrefresh(ventana);
-    getchar();
+    //getchar();
     endwin();
     return 0;
 }
