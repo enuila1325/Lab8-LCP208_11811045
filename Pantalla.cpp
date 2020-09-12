@@ -33,7 +33,7 @@ int main()
     box(encabezado, ACS_VLINE, ACS_HLINE);
     int longitud = (MaxX - 2) / 3;
     int distanciaEnY = MaxY / 2;
-    WINDOW *segundaVentana = subwin(ventana, distanciaEnY + 2, longitud, 6, 1);
+    WINDOW *segundaVentana = subwin(ventana, distanciaEnY, longitud, 6, 1);
     box(segundaVentana, ACS_VLINE, ACS_HLINE);
     mvwprintw(segundaVentana, 1, 1, "Software");
     mvwprintw(segundaVentana, 2, 1, "Hardware");
@@ -42,7 +42,7 @@ int main()
     mvwprintw(segundaVentana, 5, 1, "Network services");
     mvwprintw(segundaVentana, 6, 1, "Security And Users");
     mvwprintw(segundaVentana, 7, 1, "Misc");
-    WINDOW *terceraVentana = subwin(ventana, distanciaEnY + 2, MaxX - longitud - 2, 6, longitud + 1);
+    WINDOW *terceraVentana = subwin(ventana, distanciaEnY, MaxX - longitud - 2, 6, longitud + 1);
     box(terceraVentana, ACS_VLINE, ACS_HLINE);
     mvwprintw(terceraVentana, 1, 1, "Patch CD Update");
     mvwprintw(terceraVentana, 2, 1, "Installation into Directory");
